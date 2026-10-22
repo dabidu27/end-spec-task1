@@ -1,0 +1,1 @@
+AI a fost folosit pentru examinarea implementarii, rularea verificarilor, ajutor la logica si codul pentru ambalaje si cantitati si ajutor la redactarea documentatiei.

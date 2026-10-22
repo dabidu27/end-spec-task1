@@ -1,0 +1,11 @@
+- Nu exista SKU-uri duplicate in lista de produse sau in etichetele manuale, produse fara date de vanzari, categorii ale furnizorului necompletate sau identificatori de etichete care lipsesc din arborele magazinului.
+- Fisierul rezultat are formatul cerut, cate un rand pentru fiecare denumire originala a categoriei furnizorului, fara denumiri duplicate, cu identificatori de destinatie valizi si aceeasi destinatie pentru variantele care difera doar prin litere mari/mici sau spatii.
+- `python src/validate_model.py` raporteaza o acuratete de aproximativ 96% pe setul de test; `python src/audit.py` reproduce cifrele de mai sus privind acoperirea si diferentele dintre etichetele manuale.
+
+Exemplu din `outputs/mapping.csv`:
+
+```csv
+supplier_category,our_category_id
+Tns > Tinned To,7443
+Pulses grai,9228
+Butter_Bu Wk,8993
