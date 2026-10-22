@@ -3,6 +3,7 @@ from utils import prepare
 from model import tfidf, apply_tfidf, train_model, predict_proba
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+from packsize import to_family
 
 
 if __name__ == "__main__":
@@ -15,7 +16,7 @@ if __name__ == "__main__":
     #our feature is the product description (name + brand), which we will convert into numbers with tfidf
     texts = sp_labelled.text
     #the prediction is our_category_id
-    y = sp_labelled.our_category_id
+    y = sp_labelled.our_category_id.astype(int).map(to_family)
 
     #train test split
     texts_train, texts_test, y_train, y_test = train_test_split(texts, y, test_size=0.2, stratify=y, random_state=42)

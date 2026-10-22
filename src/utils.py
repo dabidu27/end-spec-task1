@@ -17,7 +17,7 @@ def load():
 
     #str to float for sale numbers
     sales["revenue"] = sales.revenue.astype(float)
-    sales["units"] = sales.revenue.astype(float)
+    sales["units"] = sales.units.astype(float)
 
     return sp, lab, cats, sales
 
