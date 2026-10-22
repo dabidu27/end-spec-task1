@@ -1,8 +1,13 @@
-from common import load, ignoreCaseSpacing
+from utils import load, ignoreCaseSpacing
 
 sp, lab, cats, sales = load()
 
 #print(sp)
+
+#supplier_products - 1 row per product - supplier category, name, brand, packsize
+#sales - units and revenue for each product
+#labelled_products - id of the category our team puts the product in
+#our_categories - id to category path
 
 #Integrity check
 print("duplicate SKUs: ", sp.supplier_sku.duplicated().sum(), lab.supplier_sku.duplicated().sum())
